@@ -135,7 +135,9 @@ def randomize(human, symmetry, macro, height, face, body):
             elif m.fullName in ["forehead/forehead-nubian-less|more", "forehead/forehead-scale-vert-less|more"]:
                 sigma = 0.02
                 # TODO add further restrictions on gender-dependent targets like pregnant and breast
-            elif "trans-horiz" in m.fullName or m.fullName == "hip/hip-trans-in|out":
+            elif m.fullName == "hip/hip-trans-in|out" or m.fullName == "torso/torso-trans-in|out" or \
+                 m.fullName == "neck/neck-trans-in|out" or m.fullName == "head/head-trans-in|out" or \
+                 m.fullName == "nose/nose-trans-in|out" or m.fullName == "mouth/mouth-trans-in|out":
                 if symmetry == 1:
                     randomValue = m.getDefaultValue()
                 else:
